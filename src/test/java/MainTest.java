@@ -1,6 +1,24 @@
-public class MainTest {
-}
+//public class MainTest {
+//}
+import org.apache.commons.lang3.StringUtils;
 
+import java.util.Scanner;
+
+public class MainTest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please enter something: ");
+        String something = sc.nextLine();
+        System.out.println("You entered: \"" + something + "\"");
+        System.out.println("\"" + something + "\" " + returnNumMessage(something));
+        System.out.println("Flipped Case: " + StringUtils.swapCase(something));
+        System.out.println("Reversed: " + StringUtils.reverse(something));
+    }
+
+    public static String returnNumMessage(String input) {
+        return (StringUtils.isNumeric(input)) ? "is a number" : "is not a number";
+    }
+}
 
 //    Create a new class with a main method that prompts the user for input and does the following (using the Stringutils class)
 //
